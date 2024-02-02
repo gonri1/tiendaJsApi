@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <main class="container">
+        <!-- Menu navegacion -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse mb-4" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="imagenes/carrito.png" height="100" alt="MDB Logo" loading="lazy" />
+                        <button type="button" class="btn btn-danger mx-auto" id="refresh">Refrescar</button>
+                    </a>
+
+
+                    <!-- Formulario con el select de precio -->
+
+                    <form id="formSelect">
+                        <select class="form-select ms-5" aria-label="Default select example" id="select">
+                            <option selected>Filtrar Por precio</option>
+                            <option value="ascendente">Precio Ascendente</option>
+                            <option value="descendiente">Precio Descendiente</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-4 ms-5">Enviar</button>
+                    </form>
+
+                    <!-- Formulario con el select de Categoria -->
+
+                    <form id="formSelectCategories">
+
+                        <select class="form-select ms-5" aria-label="Default select example" id="selectCategories">
+                            <option selected>Selecciona Categoria</option>
+                            <!-- Depositamos las categorias -->
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-4 ms-5">Enviar</button>
+                    </form>
+
+                    <!-- Formulario con el select de Marcas -->
+
+                    <form id="formSelectBrand">
+                        <select class="form-select ms-5" aria-label="Default select example" id="selectBrand">
+                            <option selected>Selecciona Marca</option>
+                            <!-- Depositamos las Marcas -->
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-4 ms-5">Enviar</button>
+                    </form>
+                </div>
+
+
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <section><!-- REPOSIORIO DE PRODUCTOS Y CARRITO -->
+            <div class="row g-0" id="mainCards"> 
+
+                <div class="col-6 p-3 mb-5 border-top" id="cardRepository">
+                    <!-- columna 1 -->
+                </div>
+
+                <div class="col-5 p-3 mb-5 border-top" id="cardRepository2">
+                    <!-- columna 2 -->
+                </div>
+
+                <!-- carrito -->
+
+                <div class="col-1 bg-light border-start">
+                    <img src="imagenes/carritoNegro.png" height="70" alt="MDB Logo" loading="lazy" class="ms-3 mb-2" />
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carrito" class="text-center table-warning">
+                            <!-- aqui imprimimos los precios de los productos agregados al carrito -->
+                        </tbody>
+                    </table>
+
+                    <h4 class="text-center text-success border-bottom font-monospace">Total</h4>
+                    <div id="contenedorTotales">
+                        <!-- aqui imprimimos el total de productos agregados -->
+                    </div>
+                </div>
+            </div>
+        </section>       
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
