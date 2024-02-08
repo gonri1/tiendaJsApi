@@ -5,8 +5,6 @@
 // https://pixabay.com/ para imagenes
 
 
-
-
 //Creo repositorios donde van a ir ubicadas las crads
 
 let cardRepository = document.querySelector('#cardRepository');
@@ -24,6 +22,7 @@ refresh.addEventListener('click', function (e) {
   let alertaRefresh = Swal.fire("Refrescando");
 
   if (alertaRefresh) {
+    
     cardRepository.innerHTML = "";
     cardRepository2.innerHTML = ""; //Vaciamos lo que haya 
     carrito.innerHTML = "";
@@ -391,6 +390,7 @@ cardRepository.addEventListener('click', function (event) {
         text: "El producto ha sido agregado",
         icon: "success"
       });
+      
       let res = parseFloat(event.target.getAttribute('value')); // Convertir a número
 
       let preciosTr = document.createElement('tr');
