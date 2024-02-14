@@ -250,7 +250,7 @@ async function selectBrand() {
 
     let marcasUnicas = new Set();//Eliminamos coincidencias
 
-    selectBrands.innerHTML = " <option selected>Selecciona Categoria</option>";
+    selectBrands.innerHTML = " <option selected>Selecciona Marca</option>";
 
     resultadoReal.products.forEach(function (element) {
       marcasUnicas.add(element.brand);
